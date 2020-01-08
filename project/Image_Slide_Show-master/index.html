@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>click</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  	<link href="CustomStyle.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <h1 class="heading">Happy Birthday Neha</h1>
+
+    <div id="container">
+        <img class="pic_slide" src="../../photos/IMG-20180109-WA0014.jpg" alt="pic1" />
+        <img class="pic_slide" src="../../photos/IMG-20180317-WA0028.jpg" alt="pic2" />
+        <img class="pic_slide" src="../../photos/IMG-20180317-WA0029.jpg" alt="pic3" />
+        <img class="pic_slide" src="../../photos/IMG-20180801-WA0020.jpg" alt="pic4" />
+        <img class="pic_slide" src="../../photos/IMG-20180926-WA0038.jpg" alt="pic5" />
+        <img class="pic_slide" src="../../photos/IMG-20180926-WA0046.jpg" alt="pic6" />
+        <img class="pic_slide" src="../../photos/IMG_20180109_145309.jpg" alt="pic7" />
+        <img class="pic_slide" src="../../photos/IMG_20180820_125533.jpg" alt="pic7" />
+        <img class="pic_slide" src="../../photos/IMG_20190204_134549.jpg" alt="pic7" />
+        <img class="pic_slide" src="../../photos/IMG_20190209_125708.jpg" alt="pic7" />
+        <img class="pic_slide" src="../../photos/IMG_20190209_125708.jpg" alt="pic7" />
+        <img class="pic_slide" src="../../photos/IMG_20190209_125718.jpg" alt="pic7" />
+        <img class="pic_slide" src="../../photos/IMG_20190209_125720.jpg" alt="pic7" />
+        <img class="pic_slide" src="../../photos/IMG_20190316_181541.jpg" alt="pic7" />
+        <img class="pic_slide" src="../../photos/IMG_20190316_181559.jpg" alt="pic7" />
+        <img class="pic_slide" src="../../photos/IMG_20190316_182743.jpg" alt="pic7" />
+        <img class="pic_slide" src="../../photos/IMG_20191208_143749.jpg" alt="pic7" />
+        <img class="pic_slide" src="../../photos/IMG_20191208_143822.jpg" alt="pic7" />
+        <img class="pic_slide" src="../../photos/IMG_20191208_144001.jpg" alt="pic7" />
+        <img class="pic_slide" src="../../photos/IMG_20191208_144005.jpg" alt="pic7" />
+        <img class="pic_slide" src="../../photos/IMG_20191208_153412.jpg" alt="pic7" />
+    </div>
+
+    <script type="text/javascript">
+      var click=1;
+
+function next(n) {
+click = click + n;
+slideshow(click);
+}
+
+function prev(n) {
+click = click - n;
+slideshow(click);
+}
+
+
+      slideshow(1);
+
+      function slideshow(n) {
+        var i;
+          var x = document.getElementsByClassName("pic_slide");
+          if(n>x.length){click = 1};
+          if(n<1){click = x.length;}
+          for(i=0; i<x.length; i++){
+            x[i].style.display="none";
+          }
+          x[click-1].style.display="block";
+      }
+
+      slide();
+
+      function slide() {
+        var i;
+        var x = document.getElementsByClassName("pic_slide");
+        for(i=0; i<x.length; i++){
+          x[i].style.display="none";
+        }
+        if(click>x.length){click=1}
+        x[click-1].style.display="block";
+        click++;
+        setTimeout(slide,2000);
+      }
+      console.log(click);
+      
+    </script>
+  </body>
+</html>

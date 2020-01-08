@@ -1,0 +1,58 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: #fa28bb;
+
+}
+
+.heading {
+  font-family: 'Dancing Script', cursive;
+  color: #1b29a7;
+  font-size: 3em;
+  text-align: center;
+  font-weight: bold; 
+}
+
+#navbar{
+  background-color: #262b2a;
+  display: flex;
+  max-height: 70px;
+}
+
+#container{
+  padding-top: 3em;
+  width: 50%;
+  height: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.pic_slide{
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  border: 15px groove #ededed;
+}
+
+
+#container>#btnl:hover{
+    box-shadow: 10px 2px 20px 5px #ccc;
+    cursor: pointer;
+}
+
+#container>#btnr:hover{
+    box-shadow: -10px 2px 20px 5px #ccc;
+    cursor: pointer;
+}
+
+#container>#btnr{
+  position: relative;
+  float: right;
+}
